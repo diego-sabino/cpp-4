@@ -15,31 +15,31 @@ struct Conta
     string cpf;
     string nome;
     float saldo;
-};
-
-void sacar(Conta& conta, float sacar){
-    if (sacar <= 0) {
-        cout << "Você não pode sacar um valor negativo" << endl;
-        return;
-    }
     
-    if (sacar > conta.saldo){
-        cout << "Saldo insuficiente" << endl;
-        return;
-    }
+    void sacar(float sacar){
+        if (sacar <= 0) {
+            cout << "Você não pode sacar um valor negativo" << endl;
+            return;
+        }
+        
+        if (sacar > saldo){
+            cout << "Saldo insuficiente" << endl;
+            return;
+        }
+        
+        saldo -= sacar;
+    };
     
-    conta.saldo -= sacar;
-};
+    void depositar(float sacar){
+        if (sacar <= 0) {
+            cout << "Você não pode depositar um valor negativo" << endl;
+            return;
+        }
+        
+        saldo += sacar;
+    };
 
-void depositar(Conta& conta, float sacar){
-    if (sacar <= 0) {
-        cout << "Você não pode depositar um valor negativo" << endl;
-        return;
-    }
-    
-    conta.saldo += sacar;
 };
-
 
 int main(int argc, const char * argv[]) {
     Conta ClienteUm;
@@ -49,7 +49,8 @@ int main(int argc, const char * argv[]) {
     ClientDois.saldo = 50;
     
     
-    depositar(ClienteUm, 10);
+    ClienteUm.depositar(10);
+    ClientDois.sacar(82821);
     
     cout << ClienteUm.saldo << endl;
     cout << ClientDois.saldo << endl;
