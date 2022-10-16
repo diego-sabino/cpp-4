@@ -29,7 +29,6 @@ void Account::deposit(float valueDeposit)
         std::cout << "Você não pode depositar um valor negativo" << std::endl;
         return;
     }
-    
     balance += valueDeposit;
 }
 
