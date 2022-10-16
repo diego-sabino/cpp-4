@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		852AB51D28F91C3900110106 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 852AB51C28F91C3900110106 /* main.cpp */; };
+		859FDE5C28FAAD49007540D5 /* account.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 859FDE5B28FAAD49007540D5 /* account.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		852AB51928F91C3900110106 /* AluraOO-cpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "AluraOO-cpp"; sourceTree = BUILT_PRODUCTS_DIR; };
 		852AB51C28F91C3900110106 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		859FDE5B28FAAD49007540D5 /* account.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = account.cpp; sourceTree = "<group>"; };
+		859FDE5D28FAAD62007540D5 /* account.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = account.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				852AB51C28F91C3900110106 /* main.cpp */,
+				859FDE5B28FAAD49007540D5 /* account.cpp */,
+				859FDE5D28FAAD62007540D5 /* account.hpp */,
 			);
 			path = "AluraOO-cpp";
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				852AB51D28F91C3900110106 /* main.cpp in Sources */,
+				859FDE5C28FAAD49007540D5 /* account.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
