@@ -12,10 +12,13 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     Account ClientOne("122", "123456789", "zephyr", 300);
+    Account ClientTwo("123", "123456789", "664", 500);
+    
     
     //ClientOne.deposit(100);
     
     cout << ClientOne.getBalance() << endl;
     cout << ClientOne.getName() << endl;
+    cout << Account::getNumberAccount() << endl;
     return 0;
 }
