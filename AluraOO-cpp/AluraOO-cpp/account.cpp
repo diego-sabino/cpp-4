@@ -8,6 +8,14 @@
 #include "account.hpp"
 #include <iostream>
 
+Account::Account(std::string number, std::string cpf, std::string name, float balance)
+:number(number),
+cpf(cpf),
+name(name),
+balance(balance)
+{
+}
+
 void Account::withdraw(float valueWithdraw)
 {
     if (valueWithdraw <= 0) {
@@ -19,7 +27,7 @@ void Account::withdraw(float valueWithdraw)
         std::cout << "Saldo insuficiente" << std::endl;
         return;
     }
-    
+
     valueWithdraw -= balance;
 };
 
@@ -29,6 +37,7 @@ void Account::deposit(float valueDeposit)
         std::cout << "Você não pode depositar um valor negativo" << std::endl;
         return;
     }
+
     balance += valueDeposit;
 }
 
@@ -50,19 +59,4 @@ std::string Account::getCpf()
 std::string Account::getNumber()
 {
     return number;
-}
-
-void Account::defineName(std::string holderName)
-{
-    name = holderName;
-}
-
-void Account::defineCpf(std::string holderCpf)
-{
-    cpf = holderCpf;
-}
-
-void Account::defineNumber(std::string holderNumber)
-{
-    number = holderNumber;
 }
