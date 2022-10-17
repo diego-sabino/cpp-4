@@ -8,16 +8,23 @@
 #include "account.hpp"
 #include <iostream>
 
-Account::Account(std::string number, std::string cpf, std::string name, float balance)
-:number(number),
-cpf(cpf),
-name(name),
-balance(balance)
+int Account::numberAccount = 0;
+
+Account::Account(std::string number, std::string cpf, std::string name, float balance):
+    number(number),
+    cpf(cpf),
+    name(name),
+    balance(balance)
 {
+    checkNameLength();
+    numberAccount++;
 }
 
-void Account::withdraw(float valueWithdraw)
-{
+Account::~Account() {
+    numberAccount--;
+}
+
+void Account::withdraw(float valueWithdraw) {
     if (valueWithdraw <= 0) {
         std::cout << "Você não pode sacar um valor negativo" << std::endl;
         return;
@@ -31,8 +38,7 @@ void Account::withdraw(float valueWithdraw)
     valueWithdraw -= balance;
 };
 
-void Account::deposit(float valueDeposit)
-{
+void Account::deposit(float valueDeposit){
     if (valueDeposit <= 0) {
         std::cout << "Você não pode depositar um valor negativo" << std::endl;
         return;
@@ -41,22 +47,29 @@ void Account::deposit(float valueDeposit)
     balance += valueDeposit;
 }
 
-float Account::getBalance()
-{
+float Account::getBalance() {
     return balance;
 }
 
-std::string Account::getName()
-{
+std::string Account::getName() {
     return name;
 }
 
-std::string Account::getCpf()
-{
+std::string Account::getCpf() {
     return cpf;
 }
 
-std::string Account::getNumber()
-{
+std::string Account::getNumber() {
     return number;
+}
+
+int Account::getNumberAccount() {
+    return numberAccount;
+}
+
+void Account::checkNameLength() {
+    if(name.size() < 5) {
+        std::cout << "\"name\" deve ter pelo menos 5 caracteres" << std::endl;
+        exit(1);
+    }
 }
