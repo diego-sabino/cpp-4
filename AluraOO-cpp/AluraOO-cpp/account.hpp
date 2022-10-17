@@ -17,18 +17,17 @@ private:
     std::string number;
     std::string cpf;
     std::string name;
-    float balance = 0;
+    float balance;
 
 public:
+    Account(std::string number, std::string cpf, std::string name, float balance);
     void withdraw(float valueWithdraw);
     void deposit(float valueDeposit);
     float getBalance();
     std::string getName();
     std::string getCpf();
     std::string getNumber();
-    void defineName(std::string holderName);
-    void defineCpf(std::string holderCpf);
-    void defineNumber(std::string holderNumber);
+
 };
 
 #endif /* account_hpp */

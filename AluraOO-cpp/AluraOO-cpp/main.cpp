@@ -11,10 +11,9 @@
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-    Account ClientOne;
+    Account ClientOne("122", "123456789", "zephyr", 300);
     
-    ClientOne.deposit(100);
-    ClientOne.defineName("zephyr");
+    //ClientOne.deposit(100);
     
     cout << ClientOne.getBalance() << endl;
     cout << ClientOne.getName() << endl;
