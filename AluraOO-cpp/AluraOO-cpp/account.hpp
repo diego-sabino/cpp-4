@@ -10,24 +10,21 @@
 #define account_hpp
 #include <string>
 #include <stdio.h>
+#include "holder.hpp"
 
 class Account
 {
 private:
     std::string number;
-    std::string cpf;
-    std::string name;
+    Holder holder;
     float balance;
-    void checkNameLength();
     static int numberAccount;
 public:
-    Account(std::string number, std::string cpf, std::string name, float balance);
+    Account(std::string number, Holder holder, float balance);
     ~Account();
     void withdraw(float valueWithdraw);
     void deposit(float valueDeposit);
     float getBalance();
-    std::string getName();
-    std::string getCpf();
     std::string getNumber();
     static int getNumberAccount();
 };

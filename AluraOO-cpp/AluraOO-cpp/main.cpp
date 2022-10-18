@@ -7,18 +7,24 @@
 
 #include <iostream>
 #include "account.hpp"
+#include "holder.hpp"
+#include "account.hpp"
 
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-    Account ClientOne("122", "123456789", "zephyr", 300);
-    Account ClientTwo("123", "123456789", "664", 500);
+    
+    Holder ClientOne("123456789", "zephyr");
+    Account AccountOne("122", ClientOne, 300);
+   //Account ClientTwo("123", "123456789", "664", 500);
     
     
     //ClientOne.deposit(100);
     
-    cout << ClientOne.getBalance() << endl;
+    cout << AccountOne.getBalance() << endl;
     cout << ClientOne.getName() << endl;
+    cout << ClientOne.getCpf() << endl;
     cout << Account::getNumberAccount() << endl;
     return 0;
 }
+	
