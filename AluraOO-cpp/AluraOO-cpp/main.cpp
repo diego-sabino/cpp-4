@@ -17,9 +17,6 @@ int main(int argc, const char * argv[]) {
     Holder ClientOne(string("12345678912"), "zephyr");
     Account AccountOne("122", ClientOne, 300);
     
-    
-    //ClientOne.deposit(100);
-    
     cout << AccountOne.getBalance() << endl;
     cout << ClientOne.getName() << endl;
     cout << Account::getNumberAccount() << endl;
