@@ -7,8 +7,9 @@
 
 #include "holder.hpp"
 #include <iostream>
+#include "cpf.hpp"
 
-Holder::Holder(std::string cpf, std::string name):
+Holder::Holder(Cpf cpf, std::string name):
 cpf(cpf),
 name(name)
 {
@@ -24,8 +25,4 @@ void Holder::checkNameLength() {
 
 std::string Holder::getName() {
     return name;
-}
-
-std::string Holder::getCpf() {
-    return cpf;
 }

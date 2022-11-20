@@ -7,20 +7,19 @@
 #pragma once
 #ifndef holder_hpp
 #define holder_hpp
-
+#include "cpf.hpp"
 #include <stdio.h>
 
 #include <string>
 
 class Holder {
 private:
-    std::string cpf;
+    Cpf cpf;
     std::string name;
     void checkNameLength();
 public:
-    Holder(std::string cpf, std::string name);
+    Holder(Cpf cpf, std::string name);
     std::string getName();
-    std::string getCpf();
 };
 
 
