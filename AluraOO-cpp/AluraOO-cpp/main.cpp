@@ -16,7 +16,6 @@ int main(int argc, const char * argv[]) {
     
     Holder ClientOne(string("12345678912"), "zephyr");
     Account AccountOne("122", ClientOne, 300);
-   //Account ClientTwo("123", "123456789", "664", 500);
     
     
     //ClientOne.deposit(100);
