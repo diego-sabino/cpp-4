@@ -10,13 +10,11 @@
 
 int Account::numberAccount = 0;
 
-Account::Account(std::string number, std::string cpf, std::string name, float balance):
+Account::Account(std::string number, Holder holder, float balance):
     number(number),
-    cpf(cpf),
-    name(name),
+    holder(holder),
     balance(balance)
 {
-    checkNameLength();
     numberAccount++;
 }
 
@@ -51,14 +49,6 @@ float Account::getBalance() {
     return balance;
 }
 
-std::string Account::getName() {
-    return name;
-}
-
-std::string Account::getCpf() {
-    return cpf;
-}
-
 std::string Account::getNumber() {
     return number;
 }
@@ -67,9 +57,3 @@ int Account::getNumberAccount() {
     return numberAccount;
 }
 
-void Account::checkNameLength() {
-    if(name.size() < 5) {
-        std::cout << "\"name\" deve ter pelo menos 5 caracteres" << std::endl;
-        exit(1);
-    }
-}

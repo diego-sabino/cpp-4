@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8518DCCC292AC67700064C73 /* cpf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8518DCCA292AC67700064C73 /* cpf.cpp */; };
 		852AB51D28F91C3900110106 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 852AB51C28F91C3900110106 /* main.cpp */; };
+		8543D34328FEFC220079E588 /* holder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8543D34128FEFC220079E588 /* holder.cpp */; };
 		859FDE5C28FAAD49007540D5 /* account.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 859FDE5B28FAAD49007540D5 /* account.cpp */; };
 /* End PBXBuildFile section */
 
@@ -24,8 +26,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8518DCCA292AC67700064C73 /* cpf.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cpf.cpp; sourceTree = "<group>"; };
+		8518DCCB292AC67700064C73 /* cpf.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cpf.hpp; sourceTree = "<group>"; };
 		852AB51928F91C3900110106 /* AluraOO-cpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "AluraOO-cpp"; sourceTree = BUILT_PRODUCTS_DIR; };
 		852AB51C28F91C3900110106 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8543D34128FEFC220079E588 /* holder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = holder.cpp; sourceTree = "<group>"; };
+		8543D34228FEFC220079E588 /* holder.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = holder.hpp; sourceTree = "<group>"; };
 		859FDE5B28FAAD49007540D5 /* account.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = account.cpp; sourceTree = "<group>"; };
 		859FDE5D28FAAD62007540D5 /* account.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = account.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +69,10 @@
 				852AB51C28F91C3900110106 /* main.cpp */,
 				859FDE5B28FAAD49007540D5 /* account.cpp */,
 				859FDE5D28FAAD62007540D5 /* account.hpp */,
+				8543D34128FEFC220079E588 /* holder.cpp */,
+				8543D34228FEFC220079E588 /* holder.hpp */,
+				8518DCCA292AC67700064C73 /* cpf.cpp */,
+				8518DCCB292AC67700064C73 /* cpf.hpp */,
 			);
 			path = "AluraOO-cpp";
 			sourceTree = "<group>";
@@ -94,7 +104,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					852AB51828F91C3900110106 = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -124,6 +134,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8543D34328FEFC220079E588 /* holder.cpp in Sources */,
+				8518DCCC292AC67700064C73 /* cpf.cpp in Sources */,
 				852AB51D28F91C3900110106 /* main.cpp in Sources */,
 				859FDE5C28FAAD49007540D5 /* account.cpp in Sources */,
 			);
@@ -165,6 +177,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -223,6 +236,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -244,7 +258,9 @@
 		852AB52128F91C3900110106 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -252,7 +268,9 @@
 		852AB52228F91C3900110106 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
